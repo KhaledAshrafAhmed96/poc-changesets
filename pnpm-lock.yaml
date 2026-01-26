@@ -12,7 +12,11 @@ importers:
         specifier: ^2.29.8
         version: 2.29.8
 
-  packages/ui: {}
+  packages/ui:
+    dependencies:
+      utils:
+        specifier: workspace:*
+        version: link:../utils
 
   packages/utils: {}
 
