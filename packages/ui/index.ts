@@ -1,3 +1,5 @@
+import { multiply, sum } from '../utils';
+
 export const Button = (props: { label: string; onClick?: () => void }) => {
   return `<button>${props.label}</button>`;
 };
@@ -16,4 +18,14 @@ export const Modal = (props: {
   onClose?: () => void;
 }) => {
   return `<div class="modal"><div class="modal-header"><h3>${props.title}</h3></div><div class="modal-body">${props.children}</div></div>`;
+};
+
+// New: Using utils functions
+export const Counter = (initialValue: number = 0) => {
+  let count = initialValue;
+  return {
+    increment: () => sum(count++, 1),
+    multiply: (by: number) => multiply(count, by),
+    getValue: () => count,
+  };
 };
