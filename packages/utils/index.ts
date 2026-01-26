@@ -16,3 +16,9 @@ export const sqrt = (n: number): number => {
   if (n < 0) throw new Error('Cannot calculate square root of negative number');
   return Math.sqrt(n);
 };
+
+// New: Utility for rounding
+export const round = (n: number, decimals: number = 0): number => {
+  const factor = Math.pow(10, decimals);
+  return Math.round(n * factor) / factor;
+};
