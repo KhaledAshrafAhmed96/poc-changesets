@@ -17,3 +17,5 @@ pnpm changeset publish --dry-run
 # 5. Create changeset manually (bypasses auto-detection)
 
 pnpm changeset --empty
+
+https://blog.ignacemaes.com/automate-npm-releases-on-github-using-changesets/
