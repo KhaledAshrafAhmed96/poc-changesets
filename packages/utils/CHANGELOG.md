@@ -1,5 +1,11 @@
 # utils
 
+## 2.1.0
+
+### Minor Changes
+
+- 6a2c629: add round function for decimal
+
 ## 2.0.0
 
 ### Major Changes
