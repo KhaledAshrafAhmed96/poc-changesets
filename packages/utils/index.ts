@@ -22,6 +22,3 @@ export const round = (n: number, decimals: number = 0): number => {
   const factor = Math.pow(10, decimals);
   return Math.round(n * factor) / factor;
 };
-
-// New: Absolute value
-export const abs = (n: number): number => (n < 0 ? -n : n);
