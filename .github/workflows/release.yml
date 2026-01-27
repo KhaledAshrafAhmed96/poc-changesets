@@ -32,6 +32,18 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Verify GitHub Token is set
+        run: |
+          if [ -z "${{ secrets.GH_TOKEN }}" ]; then
+            echo "❌ GH_TOKEN secret is not set!"
+            exit 1
+          else
+            echo "✅ GH_TOKEN is configured (length: ${#GH_TOKEN})"
+            echo "Token value (will be masked by GitHub): $GH_TOKEN"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
