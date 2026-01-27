@@ -1,5 +1,12 @@
 # ui
 
+## 2.2.1
+
+### Patch Changes
+
+- Updated dependencies [[`140ed53`](https://github.com/KhaledAshrafAhmed96/poc-changesets/commit/140ed536f731e98937336851850a45fafff48087)]:
+  - utils@2.2.1
+
 ## 2.2.0
 
 ### Minor Changes
