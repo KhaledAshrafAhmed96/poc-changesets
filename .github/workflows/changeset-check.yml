@@ -10,6 +10,8 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    # Skip changeset check for automated version PRs
+    if: ${{ !startsWith(github.head_ref, 'changeset-release/') }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
