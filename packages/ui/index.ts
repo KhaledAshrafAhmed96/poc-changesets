@@ -25,6 +25,7 @@ export const Counter = (initialValue: number = 0) => {
   let count = initialValue;
   return {
     increment: () => sum(count++, 1),
+    minus: () => sum(count--, 1),
     multiply: (by: number) => multiply(count, by),
     getValue: () => count,
   };
