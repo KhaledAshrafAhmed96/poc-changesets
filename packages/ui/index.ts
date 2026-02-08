@@ -1,7 +1,17 @@
 import { multiply, sum } from '../utils';
 
-export const Button = (props: { label: string; onClick?: () => void }) => {
-  return `<button>${props.label}</button>`;
+type ButtonProps = {
+  label: string;
+  onClick?: () => void;
+  variant?: 'primary' | 'secondary';
+};
+export const Button = (props: ButtonProps) => {
+  const variants = {
+    primary: 'bg-blue-500 text-white hover:bg-blue-600',
+    secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
+  };
+
+  return `<button class="${variants[props.variant || 'primary']}" onclick="${props.onClick ? '() => props.onClick()' : ''}">${props.label}</button>`;
 };
 
 export const Card = (props: { title: string; content: string }) => {
