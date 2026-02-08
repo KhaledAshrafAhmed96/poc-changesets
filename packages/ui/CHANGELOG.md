@@ -1,5 +1,15 @@
 # ui
 
+## 2.3.0
+
+### Minor Changes
+
+- [#7](https://github.com/KhaledAshrafAhmed96/poc-changesets/pull/7) [`51fb40d`](https://github.com/KhaledAshrafAhmed96/poc-changesets/commit/51fb40dbe10ee3bcbc7dc1ed5425ded4b71439fa) Thanks [@KhaledAshrafAhmed96](https://github.com/KhaledAshrafAhmed96)! - feat(ui): add variants to button component
+
+  ```tsx
+  <Button label="click me" variant="primary">
+  ```
+
 ## 2.2.1
 
 ### Patch Changes
